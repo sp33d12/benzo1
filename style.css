@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle at top , #2e2e2e, #0c0c0c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.contain{
+    display: grid;;
+    grid-template-columns: repeat(auto-fit,minmax(150px,500px));
+    grid-template-rows: 150px;
+    max-width: 500px;
+    width: 100%;
+    gap: 1em;
+    grid-template-areas: 
+    "i1 i2 i2"
+    "i1 i3 i3"
+    "i1 i3 i3"
+    "i4 i5 i5"
+}
+
+.item{
+    border-radius: 1rem;
+    transition: all 300ms ease;
+}
+
+.item:hover{
+    transform: translateY(-10px);
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+@media (max-width:600) {
+    .contain{
+    display: grid;;
+    grid-template-columns: repeat(auto-fit,minmax(100px,200px));
+    grid-template-rows: repeat(auto-fit,minmax(25px,75px));
+    max-width: 300px;
+    width: 100%;
+    gap: 0.1em;
+    grid-template-areas: 
+    "i1 i2 i2"
+    "i1 i3 i3"
+    "i1 i3 i3"
+    "i4 i5 i5"
+}
+
+}
